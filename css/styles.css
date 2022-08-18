@@ -23,21 +23,22 @@ body {
 .main {
     display: flex;
     flex-direction: row;
-    width: 1080px;
+    width: 1000px;
     margin: 0 auto ;
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
     }
 .main-content {
     background-color: var(--light-color);    
-    padding: 90px;
+    padding: 30px 60px;
     /* padding-left: 0; */
     }
 /* sidebar styles */
 
 .sidebar {
+    /* display:flow-root ; */
     background-color: var(--dark-background-color);
     padding: 25px;
-    width: 370px;
+    width: 40%;
 }
 .sidebar .hide-title {
     position: absolute;
@@ -52,20 +53,23 @@ body {
     margin: -1px;
     }
 .photo {
+    /* display: flex; */
     width: 290px;
-    margin-bottom: 50px;
-    box-sizing: border-box;
+    margin-bottom: 40px;
+    /* box-sizing: border-box; */
     }
 .contacts,
 .tech-skills,
 .soft-skills,
 .languages {
-    padding-left: 40px;
-    margin-bottom: 40px;
+    margin-left: 30px;
+    margin-bottom: 30px;
     }
-.contacts .no-dot {
+.contacts .no-dot,
+.project-experience > .no-dot {
     list-style: none;
-    margin-left: 0px;
+    margin-left: 0;
+    
     }
 .sidebar .title {
     color: var(--light-color);
@@ -73,12 +77,12 @@ body {
 .link,
 .item {
     font-weight: var(--item-weight);
-    font-size: 18px;
-    line-height: 1.71;
+    font-size: 16px;
+    line-height: 1.65;
     color: var(--text-color);
     }
 .link {
-    text-decoration-line: none;   
+    text-decoration-line: none; 
     color: var(--alt-light-color);
     }
 .sidebar .list {
@@ -90,45 +94,48 @@ body {
 
 /* about styles */
 
-.section {
-    margin-bottom: 45px;
+.section,
+.project-experience {
+    margin-bottom: 30px;
     }
 .title {
+    
     font-weight: var(--section-title-weight);
     font-size: 22px;
-    line-height: 1.21;
+    line-height: 1.00;
     color: var(--title-color);
     margin-bottom: 10px;
     }
 .about-name {
     font-weight: var(--section-title-weight);
     font-size: 39px;
-    line-height: 1.21;    
+    line-height: 0.5;    
     color: var(--title-color);
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     }
 .list {
     padding: 0;
     margin-left: 20px;
     }    
-.item {
+/* .item {
     font-weight: var(--item-weight);
     font-size: 16px;
-    line-height: 1.71;
+    line-height: 1.60;
     color: var(--text-color);
-    }
+    } */
 
 /* work styles */
 
 .action-title,
 .organization {
     font-weight: var(--section-title-weight);
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 16px;
+    line-height: 1.00;
     color: var(--title-color);
     margin-bottom: 10px;
     }
-.organization {
+.organization,
+.projects {
     color: var(--accent-color);
     margin-left: 5px;
     }
