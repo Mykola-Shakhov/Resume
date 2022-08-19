@@ -2,17 +2,16 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #F5F7FA;
     }
-/* main styles */
+
 :root {
     /* =============colors=============== */
 
     --text-color: #000000;
-    --alt-text-color: #242424;
     --title-color: #000000;
     --accent-color: #a80038;
     --light-color: #ffffff;
     --alt-light-color: #a8a8a8;
-    --dark-background-color: #232e36;
+    --dark-color: #232e36;
   
     /* ===========font-weights=========== */
 
@@ -22,57 +21,53 @@ body {
     }
 .main {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     width: 1000px;
     margin: 0 auto ;
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
     }
-.main-content {
-    background-color: var(--light-color);    
-    padding: 30px 60px;
-    /* padding-left: 0; */
-    }
-/* sidebar styles */
 
-.sidebar {
-    /* display:flow-root ; */
-    background-color: var(--dark-background-color);
-    padding: 25px;
-    width: 40%;
-}
-.sidebar .hide-title {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
+/* main content styles */
+
+.main-content {
+    color: var(--text-color);
+    background-color: var(--light-color);
+    padding: 30px 60px;
+    }
+h1, h2 {
+    font-weight: var(--section-title-weight);
+    font-size: 22px;
+    line-height: 1.60;
+    /* color: var(--title-color); */
+    }
+.about > h2 {
+    font-weight: var(--section-title-weight);
+    font-size: 39px;
+    line-height: 0.80;
+    /* color: var(--title-color); */
+    }
+.about,
+.projects,
+.work,
+.education {
+    margin-top: 20px;
+    }
+.list {
     padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+    margin-left: 20px;
     }
-.photo {
-    /* display: flex; */
-    width: 290px;
-    margin-bottom: 40px;
-    /* box-sizing: border-box; */
+h3 {
+    font-weight: var(--section-title-weight);
+    font-size: 16px;
+    line-height: 1.00;
+    /* color: var(--title-color); */
+    /* margin-bottom: 10px; */
     }
-.contacts,
-.tech-skills,
-.soft-skills,
-.languages {
-    margin-left: 30px;
-    margin-bottom: 30px;
-    }
-.contacts .no-dot,
-.project-experience > .no-dot {
-    list-style: none;
-    margin-left: 0;
-    
-    }
-.sidebar .title {
-    color: var(--light-color);
+h3 .organization,
+h3 .project,
+link {
+    color: var(--accent-color);
+    margin: 0 5px;
     }
 .link,
 .item {
@@ -81,74 +76,52 @@ body {
     line-height: 1.65;
     color: var(--text-color);
     }
-.link {
-    text-decoration-line: none; 
-    color: var(--alt-light-color);
-    }
-.sidebar .list {
-    color: var(--accent-color);
-    }
-.sidebar .item {
-    color: var(--light-color);
-    }
 
-/* about styles */
-
-.section,
-.project-experience {
-    margin-bottom: 30px;
-    }
-.title {
-    
-    font-weight: var(--section-title-weight);
-    font-size: 22px;
-    line-height: 1.00;
-    color: var(--title-color);
-    margin-bottom: 10px;
-    }
-.about-name {
-    font-weight: var(--section-title-weight);
-    font-size: 39px;
-    line-height: 0.5;    
-    color: var(--title-color);
-    margin-bottom: 40px;
-    }
-.list {
-    padding: 0;
-    margin-left: 20px;
-    }    
-/* .item {
-    font-weight: var(--item-weight);
-    font-size: 16px;
-    line-height: 1.60;
-    color: var(--text-color);
-    } */
-
-/* work styles */
-
-.action-title,
-.organization {
-    font-weight: var(--section-title-weight);
-    font-size: 16px;
-    line-height: 1.00;
-    color: var(--title-color);
-    margin-bottom: 10px;
-    }
-.organization,
-.projects {
-    color: var(--accent-color);
-    margin-left: 5px;
-    }
-.period {
+h4 {
     font-weight: var(--subitem-weight);
     font-size: 12px;
     line-height: 1.25;    
-    color: var(--alt-text-color);
-    margin-bottom: 10px;
+    /* color: var(--text-color); */
+   
     }
 .line {   
     margin-left: 10px;
     margin-right: 10px;
     }
 
+/* sidebar styles */
+
+.sidebar {
+    background-color: var(--dark-color);
+    padding: 25px;
+    }
+.photo {
+    width: 290px;
+    margin-bottom: 40px;
+    }
+.contacts,
+.tech-skills,
+.soft-skills,
+.languages {
+    margin-left: 30px;
+    margin-bottom: 40px;
+    }
+.sidebar h2 {
+    color: var(--light-color);
+    }
+.sidebar .list {
+    color: var(--accent-color);
+    }
+.no-dot {
+    list-style: none;
+    margin-left: 0;
+    }
+
+.sidebar .link { 
+    color: var(--light-color);
+    }
+
+.sidebar .item {
+    color: var(--light-color);
+}
 
